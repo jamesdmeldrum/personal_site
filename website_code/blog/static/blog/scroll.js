@@ -1,41 +1,24 @@
 let lastScrollPosition = 0;
-let windowHeight = window.innerHeight;
+let ticking = false;
+const header = document.querySelector("header");
+
+function updateHeaderOpacity(scrollPos, header) {
+  const windowHeight = window.innerHeight/2;
+  const headerHeight = windowHeight/2;
+  const scrollDistance = Math.max(0, scrollPos - windowHeight + headerHeight);
+  const scrollRatio = Math.min(1, scrollDistance / headerHeight);
+  header.style.opacity = 1 - scrollRatio;
+}
 
 window.addEventListener("scroll", () => {
   const currentScrollPosition = window.pageYOffset;
 
-  if (currentScrollPosition >= windowHeight/3) {
-    // Scrolling up
-    document.querySelector("header").classList.add("visible");
-  } else {
-    // Scrolling up
-    document.querySelector("header").classList.remove("visible");
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      updateHeaderOpacity(currentScrollPosition, header);
+      ticking = false;
+    });
   }
 
-  lastScrollPosition = currentScrollPosition;
+//  ticking = true;
 });
-
-$(document).ready(function() {
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this link is pointing to an anchor on the same page
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-

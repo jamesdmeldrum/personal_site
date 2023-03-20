@@ -5,8 +5,9 @@ body {
 }
 
 header {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.8s ease-in;
+  transition: opacity 0.3s ease-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,9 +19,12 @@ header {
   height=10vh;
   background-color: #5CDB95;
   color: #EDF5E1;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
+  transform-origin: top right;
 }
-header.visible {
-  opacity: 1;
+header.hidden {
+  opacity: 0;
 }
 .header-section {
     height=10vh;
