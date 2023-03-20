@@ -1,0 +1,145 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+header {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  z-index: 9999; /* set a high z-index to ensure it appears on top */
+  text-align: center;
+  height=10vh;
+  background-color: #5CDB95;
+  color: #EDF5E1;
+}
+header.visible {
+  opacity: 1;
+}
+.header-section {
+    height=10vh;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+.header-left {
+    height: 10vh;
+    width: 32vw;
+    float: left;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.header-right {
+    height: 10vh;
+    width: 32vw;
+    float: right;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.header-center {
+    height: 10vh;
+    width: 32vw;
+    float: left;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.header-link {
+    color: #EDF5E1;
+}
+.header-link:hover {
+   color: #1A1A1D;
+}
+
+.fullpage-section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+
+.left-subsection {
+  float: left;
+  height: 100vh;
+  width: 50%;
+  text-align: right;
+}
+
+.right-subsection {
+  float: left;
+  height: 100vh;
+  width: 50%;
+  align-items: left;
+}
+
+h1 {
+  padding-right: 2vw;
+  padding-left: 2vw;
+  font-size: 16vh;
+  color: #5CDB95;
+}
+
+h2 {
+  padding-right: 2vw;
+  padding-left: 2vw;
+  font-size: 8vh;
+  color: #F64C72;
+}
+
+a {
+  color: #EDF5E1;
+  text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(85%);
+}
+
+.vertical-center-home {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: inherit;
+}
+
+.vertical-center-2 {
+  margin: 0;
+  position: absolute;
+  top: 150%;
+  transform: translateY(-50%);
+  width: inherit;
+}
+
+.vertical-center-3 {
+  margin: 0;
+  position: absolute;
+  top: 250%;
+  transform: translateY(-50%);
+  width: inherit;
+}
+
+#home {
+  background-color: #05386B;
+}
+
+#professional {
+  background-color: #242582
+}
+
+#personal {
+  background-color: #1A1A1D
+}
+
+html {
+  scroll-behavior: smooth;
+}
+

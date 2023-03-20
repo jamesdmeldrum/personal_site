@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>James Meldrum</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/homepage_style.css' %}">
+    <script type="text/javascript" src="{% static 'blog/header.js' %}"></script>
+      <script type="text/javascript" src="{% static 'blog/scroll.js' %}"></script>
+  </head>
+  <body>
+
+  <header>
+    <section class="header-section">
+      <section class="header-left"><h3> <a class="header-link" href="#professional">PROFESSIONAL</a> </h3></section>
+      <section class="header-center"><h3> <a class="header-link" href="#home">JAMES MELDRUM</a> </h3></section>
+      <section class="header-right"><h3> <a class="header-link" href="#personal">PERSONAL</a> </h3></section>
+    </section>
+  </header>
+
+    <section class="fullpage-section" id="home">
+
+        <section class="left-subsection">
+          <div class="vertical-center-home">
+            <h1>James <br/> Meldrum</h1>
+          </div>
+        </section>
+
+
+        <section class="right-subsection">
+          <div class="vertical-center-home">
+            <h2> <a href="#professional">Data Scientist</a> </h2>
+            <h2> <a href="#personal">Amongst Other Things</a> </h2>
+          </div>
+        </section>
+
+    </section>
+
+    <section class="fullpage-section" id="professional">
+
+      <section class="left-subsection">
+        <div class="vertical-center-2">
+          <h1>Data Science</h1>
+        </div>
+      </section>
+
+      <section class="right-subsection">
+        <div class="vertical-center-2">
+          <h2> <a href="#professional">What have I done?</a></h2>
+          <h2> <a href="#professional">What am I currently doing?</a></h2>
+          <h2> <a href="#professional">What's up next?</a></h2>
+        </div>
+      </section>
+
+    </section>
+
+    <section class="fullpage-section" id="personal">
+
+      <section class="left-subsection">
+        <div class="vertical-center-3">
+          <h1>Personal</h1>
+        </div>
+      </section>
+
+      <section class="right-subsection">
+        <div class="vertical-center-3">
+          <h2><a href="https://jamesdmeldrum.substack.com/" target="_blank" rel="noopener noreferrer">My music blog</a></h2>
+        </div>
+      </section>
+
+    </section>
+  </body>
+</html>
