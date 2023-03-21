@@ -3,20 +3,43 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Meldrum</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'blog/homepage_style.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/homepage-style.css' %}">
   </head>
   <body>
 
-  <header>
-    <section class="header-section">
-      <section class="header-left"><h3> <a class="header-link" href="#professional">CONTACT ME</a> </h3></section>
-      <section class="header-center"><h3> <a class="header-link" href="#home">JAMES MELDRUM</a> </h3></section>
-      <section class="header-right"><h3> <a class="header-link" href="#personal">MY LINKS</a> </h3></section>
-    </section>
-  </header>
-  <script type="text/javascript" src="{% static 'blog/scroll.js' %}"></script>
+    <div class="header-fade-out">
+    <div class="header" id="right-header">
+      <div class="header_container">
+        <header class="page-header">
+         <ul class="header-menu">
+             <li class="header-item">
+                 <a href="/" class="header-link">About Me</a>
+             </li>
+             <li class="header-item">
+                 <a href="/" class="header-link">My Experience</a>
+             </li>
+             <li class="header-item">
+                 <a href="/" class="header-link">Contact Me</a>
+             </li>
+         </ul>
+        </header>
+      </div>
+    </div>
+
+    <div class="header" id="left-header">
+        <div class="header_container">
+            <header class="page-header">
+                <h1 class="page-title">My Experience</h1>
+            </header>
+        </div>
+    </div>
+        </div>
+
     {% block content %}{% endblock %}
+
+    <script type="text/javascript" src="{% static 'blog/scroll_fade.js' %}"></script>
   </body>
 </html>

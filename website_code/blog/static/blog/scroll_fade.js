@@ -1,9 +1,9 @@
 let lastScrollPosition = 0;
 let ticking = false;
-const header = document.querySelector("header");
+const header = document.querySelector(".header-fade-out");
 
 function updateHeaderOpacity(scrollPos, header) {
-  const windowHeight = window.innerHeight/2;
+  const windowHeight = window.innerHeight;
   const headerHeight = windowHeight/2;
   const scrollDistance = Math.max(0, scrollPos - windowHeight + headerHeight);
   const scrollRatio = Math.min(1, scrollDistance / headerHeight);

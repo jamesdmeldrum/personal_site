@@ -1,54 +1,55 @@
-{% extends "blog/base.html" %}
-{% block content %}
-    <section class="fullpage-section" id="home">
+{% load static %}
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>James Meldrum</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/homepage-style.css' %}">
+  </head>
+  <body>
+    <section class="fullpage-section" id="hero">
         <section class="left-subsection">
-          <div class="vertical-center-home">
-            <h1>James <br/> Meldrum</h1>
+          <div class="vertical-center vertical-center-hero">
+            <h1 class="section-title">James <br/> Meldrum</h1>
           </div>
         </section>
-
-
         <section class="right-subsection">
-          <div class="vertical-center-home">
-            <h2> <a href="#professional">Data Scientist</a> </h2>
-            <h2> <a href="#personal">Amongst Other Things</a> </h2>
+          <div class="vertical-center vertical-center-hero">
+            <h2 class="section-content"> <a class="section-link" href="#professional">Data Scientist</a> </h2>
+            <h2 class="section-content"> <a class="section-link" href="#personal">Amongst Other Things</a> </h2>
           </div>
         </section>
-
     </section>
 
     <section class="fullpage-section" id="professional">
-
       <section class="left-subsection">
-        <div class="vertical-center-2">
-          <h1>Data Science</h1>
+        <div class="vertical-center vertical-center-2">
+          <h1 class="section-title">Data Science</h1>
         </div>
       </section>
-
       <section class="right-subsection">
-        <div class="vertical-center-2">
-          <h2> <a href="#professional">What have I done?</a></h2>
-          <h2> <a href="#professional">What am I currently doing?</a></h2>
-          <h2> <a href="#professional">What's up next?</a></h2>
+        <div class="vertical-center vertical-center-2">
+          <h2 class="section-content"> <a class="section-link" href="/experience#experience">What have I done?</a></h2>
+          <h2 class="section-content"> <a class="section-link" href="/experience#currentwork">What am I currently doing?</a></h2>
+          <h2 class="section-content"> <a class="section-link" href="/experience#contactme">What's up next?</a></h2>
         </div>
       </section>
-
     </section>
 
     <section class="fullpage-section" id="personal">
-
       <section class="left-subsection">
-        <div class="vertical-center-3">
-          <h1>Personal</h1>
+        <div class="vertical-center vertical-center-3">
+          <h1 class="section-title">Personal</h1>
         </div>
       </section>
-
       <section class="right-subsection">
-        <div class="vertical-center-3">
-          <h2><a href="https://jamesdmeldrum.substack.com/" target="_blank" rel="noopener noreferrer">My music blog</a></h2>
+        <div class="vertical-center vertical-center-3">
+          <h2 class="section-content"><a class="section-link" href="https://jamesdmeldrum.substack.com/" target="_blank" rel="noopener noreferrer">My music blog</a></h2>
         </div>
       </section>
-
     </section>
-{% endblock %}
+    <script type="text/javascript" src="{% static 'blog/scroll_fade.js' %}"></script>
+  </body>
+</html>
